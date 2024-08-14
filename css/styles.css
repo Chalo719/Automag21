@@ -1,0 +1,153 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+body {
+    font-family: "Roboto Flex", sans-serif;
+    font-style: normal;
+    color: #101010;
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+.mrl-100 {
+    margin: 0 100px;
+}
+
+.header {
+    height: 70px;
+    padding: 18px 100px;
+    background-color: #101010;
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #F6F966;
+}
+
+.header__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.item__link,
+.header-phone__link {
+    color: #fff;
+}
+
+.header__nav {
+    width: 602px;
+}
+
+.main {
+    margin: 50px 0 100px;
+}
+
+.home__title {
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 130px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.home__subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+
+}
+
+#home__banner {
+    width: 100%;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 51.56px;
+
+}
+
+.section__link {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration: underline !important;
+}
+
+.section__link:visited {
+    color: inherit;
+}
+
+.catalog__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.catalog__section {
+    width: 615px;
+    max-height: 300px;
+    padding: 25px 30px 30px;
+    border: 1px solid #878787;
+    border-radius: 15px;
+}
+
+.catalog-section__container {
+    width: 100%;
+}
+
+.catalog-section__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37.5px;
+    white-space: nowrap;
+}
+
+.catalog-section__items-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+.catalog-section__item {
+    width: 250px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #B5B2B2;
+}
+
+.catalog-section__img {
+    max-width: 290px;
+    max-height: 238px;
+}
