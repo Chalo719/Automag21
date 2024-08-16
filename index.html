@@ -10,27 +10,27 @@
 
 <body>
     <header class="header flex-wrapper">
-        <a href="#" class="header__title">Автомаг21</a>
+        <a href="#" class="automag-title">Автомаг21</a>
 
         <nav class="header__nav">
-            <ul class="header__list flex-wrapper">
-                <li class="header__item header__text">
+            <ul class="header__list flex-wrapper header__text">
+                <li class="header__item">
                     <a class="item__link" href="#">Главная</a>
                 </li>
-                <li class="header__item header__text">
+                <li class="header__item">
                     <a class="item__link" href="#">Каталог</a>
                 </li>
-                <li class="header__item header__text">
+                <li class="header__item">
                     <a class="item__link" href="#">Популярные товары</a>
                 </li>
-                <li class="header__item header__text">
+                <li class="header__item">
                     <a class="item__link" href="#">Контакты</a>
                 </li>
             </ul>
         </nav>
 
         <span class="header__phone header__text">
-            <a href="tel:+79119186826" class="header-phone__link">+7 (911) 918-68-26</a>
+            <a href="tel:+79119186826" class="header__phone-link">+7 (911) 918-68-26</a>
         </span>
     </header>
 
@@ -47,7 +47,7 @@
             <img src="./img/home-banner.png" alt="home-banner" id="home__banner">
         </section>
 
-        <section class="main__section mrl-100" id="catalog">
+        <section class="main__section mrl-100 mb-80" id="catalog">
             <div class="section__header flex-wrapper mb-15">
                 <h2 class="section__title">Каталог</h2>
                 <a href="#catalog" class="section__link">Смотреть все</a>
@@ -110,15 +110,144 @@
             </div>
         </section>
 
-        <section class="main__section mrl-100" id="popular"></section>
+        <section class="main__section mrl-100 mb-80" id="popular">
+            <div class="section__header flex-wrapper mb-15">
+                <h2 class="section__title">Популярные товары</h2>
+                <a href="#popular" class="section__link">Смотреть все</a>
+            </div>
 
-        <section class="main__section mrl-100" id="contacts"></section>
+            <div class="popular__container">
+                <div class="popular__product-card">
+                    <span class="product__status product__status--available mb-10">
+                        В наличии
+                    </span>
+                    <img src="./img/pads-img.png" alt="Фото товара" class="product__img">
+                    <h4 class="product__title">
+                        Колодки тормозные задние дисковые LADA
+                        (21905-3502080-87) Vesta, Kalina,
+                        Granta Sport, X-Ray Cross (к-т 4шт)
+                    </h4>
+                    <div class="product__number-container flex-wrapper mb-15">
+                        <span class="product__number-title">Номер запчасти</span>
+                        <span class="product__number">5550-757667</span>
+                    </div>
+                    <button class="product__order-btn">Заказать</button>
+                </div>
 
-        <section class="main__section mrl-100" id="feedback"></section>
+                <div class="popular__product-card">
+                    <span class="product__status product__status--order mb-10">
+                        Под заказ
+                    </span>
+                    <img src="./img/pads-img.png" alt="Фото товара" class="product__img">
+                    <h4 class="product__title">
+                        Колодки тормозные задние дисковые LADA
+                        (21905-3502080-87) Vesta, Kalina,
+                        Granta Sport, X-Ray Cross (к-т 4шт)
+                    </h4>
+                    <div class="product__number-container flex-wrapper mb-15">
+                        <span class="product__number-title">Номер запчасти</span>
+                        <span class="product__number">5550-757667</span>
+                    </div>
+                    <button class="product__order-btn">Заказать</button>
+                </div>
+
+                <div class="popular__product-card">
+                    <span class="product__status product__status--order mb-10">
+                        Под заказ
+                    </span>
+                    <img src="./img/pads-img.png" alt="Фото товара" class="product__img">
+                    <h4 class="product__title">
+                        Колодки тормозные задние дисковые LADA
+                        (21905-3502080-87) Vesta, Kalina,
+                        Granta Sport, X-Ray Cross (к-т 4шт)
+                    </h4>
+                    <div class="product__number-container flex-wrapper mb-15">
+                        <span class="product__number-title">Номер запчасти</span>
+                        <span class="product__number">5550-757667</span>
+                    </div>
+                    <button class="product__order-btn">Заказать</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="main__section mrl-100 mb-80" id="contacts">
+            <div class="section__header flex-wrapper mb-15">
+                <h2 class="section__title">Контакты</h2>
+            </div>
+            <div class="contacts__container mb-10">
+                <div class="contacts__map-widget" style="position:relative;overflow:hidden;">
+                    <a href="https://yandex.ru/maps/org/avtomag21/127533353579/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:0px;">Автомаг21</a>
+                    <a href="https://yandex.ru/maps/2/saint-petersburg/category/auto_parts_and_auto_goods_store/184105320/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Магазин автозапчастей и
+                        автотоваров в
+                        Санкт‑Петербурге</a>
+                    <a href="https://yandex.ru/maps/2/saint-petersburg/category/car_insurance/184105536/?utm_medium=mapframe&utm_source=maps"
+                        style="color:#eee;font-size:12px;position:absolute;top:28px;">Страхование автомобилей в
+                        Санкт‑Петербурге</a>
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=30.384998%2C59.883214&mode=search&oid=127533353579&ol=biz&z=15.74"
+                        width="823" height="500" frameborder="1" allowfullscreen="true"
+                        style="position:relative;"></iframe>
+                </div>
+                <img src="./img/automag21.jpg" alt="Автомаг21" class="contacts__img">
+            </div>
+            <a href="#" class="contacts__address">Санкт-Петербург, улица Фучика, 21, корп. 2</a> <br>
+            <a href="tel:+79119186826" class="contacts__phone-link">+7 (911) 918-68-26</a>
+        </section>
+
+        <section class="main__section mrl-100 mb-100" id="feedback">
+            <div class="section__header flex-wrapper mb-15">
+                <h2 class="section__title">Оставьте заявку и мы с Вами свяжемся!</h2>
+            </div>
+            <form action="#" class="feedback__form flex-wrapper">
+                <div class="form__input-container">
+                    <input class="form__input" id="name" name="name" type="text" placeholder="Имя">
+                    <input class="form__input" id="tel" name="tel" type="tel" placeholder="+7 (9__) ___-__-__">
+                </div>
+
+                <textarea class="form__textarea" id="comment" name="comment" rows="4"
+                    placeholder="Комментарий"></textarea>
+            </form>
+        </section>
     </main>
 
     <footer class="footer">
-
+        <a href="#" class="automag-title">Автомаг21</a>
+        <div class="footer__catalog">
+            <h5 class="footer__title mb-10">Каталог</h5>
+            <nav class="footer__nav">
+                <ul class="footer__list footer__text">
+                    <li class="footer__item">
+                        <a href="#" class="item__link">Двигатели</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="item__link">Тормозная система</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="item__link">Система охлаждения</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="item__link">Электрооборудование</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__contacts">
+            <h5 class="footer__title mb-10">Наши контакты</h5>
+            <nav class="footer__nav">
+                <ul class="footer__list footer__text">
+                    <li class="footer__item">
+                        <span>Телефон:</span>
+                        <a href="tel:+79119186826" class="item__link">+7 (911) 918-68-26</a>
+                    </li>
+                    <li class="footer__item">
+                        <span>Адрес:</span>
+                        <a href="#" class="item__link">Санкт-Петербург, улица Фучика, 21, корп. 2</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 
