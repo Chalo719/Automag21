@@ -10,21 +10,21 @@
 
 <body>
     <header class="header flex-wrapper">
-        <a href="#" class="automag-title">Автомаг21</a>
+        <a href="./index.html" class="automag-title">Автомаг21</a>
 
         <nav class="header__nav">
             <ul class="header__list flex-wrapper header__text">
                 <li class="header__item">
-                    <a class="item__link" href="#">Главная</a>
+                    <a class="item__link" href="./index.html">Главная</a>
                 </li>
                 <li class="header__item">
-                    <a class="item__link" href="#">Каталог</a>
+                    <a class="item__link" href="./catalog.html">Каталог</a>
                 </li>
                 <li class="header__item">
-                    <a class="item__link" href="#">Популярные товары</a>
+                    <a class="item__link" href="./popular.html">Популярные товары</a>
                 </li>
                 <li class="header__item">
-                    <a class="item__link" href="#">Контакты</a>
+                    <a class="item__link" href="./index.html#contacts">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -50,7 +50,7 @@
         <section class="main__section mrl-100 mb-80" id="catalog">
             <div class="section__header flex-wrapper mb-15">
                 <h2 class="section__title">Каталог</h2>
-                <a href="#catalog" class="section__link">Смотреть все</a>
+                <a href="./catalog.html" class="section__link">Смотреть все</a>
             </div>
 
             <div class="catalog__container">
@@ -63,7 +63,7 @@
                             <p class="catalog-section__item">Интеркулер</p>
                             <p class="catalog-section__item">Впускной клапан</p>
                         </div>
-                        <a href="#catalog" class="section__link">Смотреть все</a>
+                        <a href="./catalog.html" class="section__link">Смотреть все</a>
                     </div>
                     <img src="./img/engine-img.png" alt="Двигатели" class="catalog-section__img">
                 </div>
@@ -77,7 +77,7 @@
                             <p class="catalog-section__item">Интеркулер</p>
                             <p class="catalog-section__item">Впускной клапан</p>
                         </div>
-                        <a href="#catalog" class="section__link">Смотреть все</a>
+                        <a href="./catalog.html" class="section__link">Смотреть все</a>
                     </div>
                     <img src="./img/brake-system-img.png" alt="Тормозная система" class="catalog-section__img">
                 </div>
@@ -91,7 +91,7 @@
                             <p class="catalog-section__item">Интеркулер</p>
                             <p class="catalog-section__item">Впускной клапан</p>
                         </div>
-                        <a href="#catalog" class="section__link">Смотреть все</a>
+                        <a href="./catalog.html" class="section__link">Смотреть все</a>
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@
                             <p class="catalog-section__item">Интеркулер</p>
                             <p class="catalog-section__item">Впускной клапан</p>
                         </div>
-                        <a href="#catalog" class="section__link">Смотреть все</a>
+                        <a href="./catalog.html" class="section__link">Смотреть все</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
         <section class="main__section mrl-100 mb-80" id="popular">
             <div class="section__header flex-wrapper mb-15">
                 <h2 class="section__title">Популярные товары</h2>
-                <a href="#popular" class="section__link">Смотреть все</a>
+                <a href="./popular.html" class="section__link">Смотреть все</a>
             </div>
 
             <div class="popular__container">
@@ -170,6 +170,13 @@
             </div>
         </section>
 
+        <div id="modal" class="modal">
+            <div class="modal__content">
+                <span class="close">&times;</span>
+                <div class="modal__inner" id="modal-inner"></div>
+            </div>
+        </div>
+
         <section class="main__section mrl-100 mb-80" id="contacts">
             <div class="section__header flex-wrapper mb-15">
                 <h2 class="section__title">Контакты</h2>
@@ -192,7 +199,8 @@
                 </div>
                 <img src="./img/automag21.jpg" alt="Автомаг21" class="contacts__img">
             </div>
-            <a href="#" class="contacts__address">Санкт-Петербург, улица Фучика, 21, корп. 2</a> <br>
+            <a href="https://yandex.ru/maps/org/avtomag21/127533353579/?from=mapframe&ll=30.385587%2C59.887335&source=mapframe&utm_source=mapframe&z=15"
+                target="_blank" class="contacts__address">Санкт-Петербург, улица Фучика, 21, корп. 2</a> <br>
             <a href="tel:+79119186826" class="contacts__phone-link">+7 (911) 918-68-26</a>
         </section>
 
@@ -200,35 +208,42 @@
             <div class="section__header flex-wrapper mb-15">
                 <h2 class="section__title">Оставьте заявку и мы с Вами свяжемся!</h2>
             </div>
-            <form action="#" class="feedback__form flex-wrapper">
-                <div class="form__input-container">
-                    <input class="form__input" id="name" name="name" type="text" placeholder="Имя">
-                    <input class="form__input" id="tel" name="tel" type="tel" placeholder="+7 (9__) ___-__-__">
+            <form action="#" class="feedback__form">
+                <div class="form__fields-container flex-wrapper mb-15">
+                    <div class="form__input-container">
+                        <input class="form__input" id="name" name="name" type="text" placeholder="Имя">
+                        <input class="form__input" id="tel" name="tel" type="tel" placeholder="+7 (9__) ___-__-__">
+                    </div>
+
+                    <textarea class="form__textarea" id="comment" name="comment" rows="4"
+                        placeholder="Комментарий"></textarea>
                 </div>
 
-                <textarea class="form__textarea" id="comment" name="comment" rows="4"
-                    placeholder="Комментарий"></textarea>
+                <div class="form__btn-container">
+                    <input class="form__btn" type="submit" value="Отправить">
+                    <input class="form__btn form__btn--transparent" type="reset" value="Очистить">
+                </div>
             </form>
         </section>
     </main>
 
     <footer class="footer">
-        <a href="#" class="automag-title">Автомаг21</a>
+        <a href="./index.html" class="automag-title">Автомаг21</a>
         <div class="footer__catalog">
             <h5 class="footer__title mb-10">Каталог</h5>
             <nav class="footer__nav">
                 <ul class="footer__list footer__text">
                     <li class="footer__item">
-                        <a href="#" class="item__link">Двигатели</a>
+                        <a href="./catalog.html" class="item__link">Двигатели</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="item__link">Тормозная система</a>
+                        <a href="./catalog.html" class="item__link">Тормозная система</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="item__link">Система охлаждения</a>
+                        <a href="./catalog.html" class="item__link">Система охлаждения</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="item__link">Электрооборудование</a>
+                        <a href="./catalog.html" class="item__link">Электрооборудование</a>
                     </li>
                 </ul>
             </nav>
@@ -243,12 +258,15 @@
                     </li>
                     <li class="footer__item">
                         <span>Адрес:</span>
-                        <a href="#" class="item__link">Санкт-Петербург, улица Фучика, 21, корп. 2</a>
+                        <a href="https://yandex.ru/maps/org/avtomag21/127533353579/?from=mapframe&ll=30.385587%2C59.887335&source=mapframe&utm_source=mapframe&z=15"
+                            target="_blank" class="item__link">Санкт-Петербург, улица Фучика, 21, корп. 2</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

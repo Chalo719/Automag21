@@ -81,11 +81,12 @@ input::-ms-clear {
 }
 
 button,
-input[type="submit"] {
+input[type="submit"],
+input[type="reset"] {
     display: inline-block;
     box-shadow: none;
-    background-color: transparent;
-    background: none;
+    /* background-color: transparent; */
+    /* background: none; */
     cursor: pointer;
 }
 
