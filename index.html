@@ -110,70 +110,50 @@
             </div>
         </section>
 
-        <section class="main__section mrl-100 mb-80" id="popular">
-            <div class="section__header flex-wrapper mb-15">
+        <section class="main__section mrl-40 mb-80" id="popular">
+            <div class="section__header flex-wrapper mb-15 mrl-60">
                 <h2 class="section__title">Популярные товары</h2>
                 <a href="./popular.html" class="section__link">Смотреть все</a>
             </div>
 
-            <div class="popular__container">
-                <div class="popular__product-card">
-                    <span class="product__status product__status--available mb-10">
-                        В наличии
-                    </span>
-                    <img src="./img/pads-img.png" alt="Фото товара" class="product__img">
-                    <h4 class="product__title">
-                        Колодки тормозные задние дисковые LADA
-                        (21905-3502080-87) Vesta, Kalina,
-                        Granta Sport, X-Ray Cross (к-т 4шт)
-                    </h4>
-                    <div class="product__number-container flex-wrapper mb-15">
-                        <span class="product__number-title">Номер запчасти</span>
-                        <span class="product__number">5550-757667</span>
-                    </div>
-                    <button class="product__order-btn">Заказать</button>
+            <div class="carousel flex-wrapper" id="popular-carousel">
+                <button class="carousel__arrow" id="prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <div class="carousel__gallery">
+                    <ul class="popular__container"></ul>
                 </div>
 
-                <div class="popular__product-card">
-                    <span class="product__status product__status--order mb-10">
-                        Под заказ
-                    </span>
-                    <img src="./img/pads-img.png" alt="Фото товара" class="product__img">
-                    <h4 class="product__title">
-                        Колодки тормозные задние дисковые LADA
-                        (21905-3502080-87) Vesta, Kalina,
-                        Granta Sport, X-Ray Cross (к-т 4шт)
-                    </h4>
-                    <div class="product__number-container flex-wrapper mb-15">
-                        <span class="product__number-title">Номер запчасти</span>
-                        <span class="product__number">5550-757667</span>
-                    </div>
-                    <button class="product__order-btn">Заказать</button>
-                </div>
-
-                <div class="popular__product-card">
-                    <span class="product__status product__status--order mb-10">
-                        Под заказ
-                    </span>
-                    <img src="./img/pads-img.png" alt="Фото товара" class="product__img">
-                    <h4 class="product__title">
-                        Колодки тормозные задние дисковые LADA
-                        (21905-3502080-87) Vesta, Kalina,
-                        Granta Sport, X-Ray Cross (к-т 4шт)
-                    </h4>
-                    <div class="product__number-container flex-wrapper mb-15">
-                        <span class="product__number-title">Номер запчасти</span>
-                        <span class="product__number">5550-757667</span>
-                    </div>
-                    <button class="product__order-btn">Заказать</button>
-                </div>
+                <button class="carousel__arrow carousel__arrow--allowed" id="next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
         </section>
 
         <div id="modal" class="modal">
             <div class="modal__content">
                 <span class="close">&times;</span>
-                <div class="modal__inner" id="modal-inner"></div>
+                <div class="modal__inner" id="modal-inner">
+                    <div class="modal__header mb-15">
+                        <h2 class="modal__title">Оставьте заявку и мы с Вами свяжемся!</h2>
+                    </div>
+                    <form action="#" class="modal-feedback__form">
+                        <div class="modal-form__input-container flex-wrapper mb-15">
+                            <input class="form__input" id="name" name="name" type="text" placeholder="Имя" required />
+                            <input class="form__input" id="tel" name="tel" type="tel"
+                                pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" placeholder="+7 (9__) ___-__-__" required />
+                        </div>
+
+                        <textarea class="form__textarea mb-15" id="comment" name="comment" rows="4"
+                            placeholder="Комментарий" required></textarea>
+
+                        <div class="form__btn-container">
+                            <input class="form__btn" type="submit" value="Отправить">
+                            <input class="form__btn form__btn--transparent" type="reset" value="Очистить">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -211,12 +191,13 @@
             <form action="#" class="feedback__form">
                 <div class="form__fields-container flex-wrapper mb-15">
                     <div class="form__input-container">
-                        <input class="form__input" id="name" name="name" type="text" placeholder="Имя">
-                        <input class="form__input" id="tel" name="tel" type="tel" placeholder="+7 (9__) ___-__-__">
+                        <input class="form__input" id="name" name="name" type="text" placeholder="Имя" required />
+                        <input class="form__input" id="tel" name="tel" type="tel" placeholder="+7 (9__) ___-__-__"
+                            pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" required />
                     </div>
 
-                    <textarea class="form__textarea" id="comment" name="comment" rows="4"
-                        placeholder="Комментарий"></textarea>
+                    <textarea class="form__textarea" id="comment" name="comment" rows="4" placeholder="Комментарий"
+                        required></textarea>
                 </div>
 
                 <div class="form__btn-container">
@@ -266,7 +247,11 @@
         </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/2a7549d8ca.js" crossorigin="anonymous"></script>
+    <script src="./js/testPopularData.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/phoneMask.js"></script>
+    <script src="./js/popularCarousel.js"></script>
 </body>
 
 </html>
