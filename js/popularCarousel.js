@@ -14,12 +14,13 @@ function allowArrows() {
 
 const list = document.querySelector('.popular__container');
 const listElems = Array.from(document.querySelectorAll('.popular__product-card'));
+const gallery = document.querySelector('.carousel__gallery');
 
 const prevArrow = document.getElementById('prev');
 const nextArrow = document.getElementById('next');
 
-const width = listElems[0].offsetWidth; // ширина картинки
-const count = 3; // видимое количество изображений
+const width = listElems[0].offsetWidth; // ширина элемента
+const count = Math.floor(gallery.offsetWidth / width); // видимое количество элементов
 const gap = 10;
 const maxPosition = -(width + gap) * (listElems.length - count);
 

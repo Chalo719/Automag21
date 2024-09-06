@@ -107,11 +107,12 @@ body {
 }
 
 .home__subtitle {
+    width: 575px;
+    margin: 0 auto;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
     text-align: center;
-
 }
 
 #home__banner {
@@ -389,6 +390,7 @@ body {
     color: #fff;
     background-color: #000;
 
+    width: 198px;
     padding: 15px 45px;
     border: 1px solid black;
     border-radius: 10px;
@@ -424,7 +426,7 @@ body {
 .modal__content {
     position: relative;
     background-color: #fefefe;
-    margin: 1% auto;
+    margin: 10% auto;
     padding: 30px;
     border: 2px solid #101010;
     border-radius: 10px;
