@@ -1,12 +1,25 @@
 function openModal() {
     modal.style.display = "block";
-    body.classList.add('no-scroll');
+    body.style.overflowY = "hidden";
+    body.style.paddingRight = `${scrollWidth}px`;
 }
 
 function closeModal() {
     modal.style.display = "none";
-    body.classList.remove('no-scroll');
+    body.style.overflowY = "scroll";
+    body.style.paddingRight = 0;
 }
+
+// создадим элемент с прокруткой
+let div = document.createElement('div');
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+
+// мы должны вставить элемент в документ, иначе размеры будут равны 0
+document.body.append(div);
+const scrollWidth = div.offsetWidth - div.clientWidth;
+div.remove();
 
 const body = document.getElementsByTagName('body')[0];
 
