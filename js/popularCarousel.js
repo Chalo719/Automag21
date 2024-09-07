@@ -19,10 +19,10 @@ const gallery = document.querySelector('.carousel__gallery');
 const prevArrow = document.getElementById('prev');
 const nextArrow = document.getElementById('next');
 
-const width = listElems[0].offsetWidth; // ширина элемента
-const count = Math.floor(gallery.offsetWidth / width); // видимое количество элементов
-const gap = 10;
-const maxPosition = -(width + gap) * (listElems.length - count);
+let width = listElems[0].offsetWidth; // ширина элемента
+let count = Math.floor(gallery.offsetWidth / width); // видимое количество элементов
+let gap = 10;
+let maxPosition = -(width + gap) * (listElems.length - count);
 
 let position = 0; // положение ленты прокрутки
 
@@ -43,3 +43,19 @@ nextArrow.onclick = function () {
 
     allowArrows();
 };
+
+window.addEventListener('orientationchange', () => {
+    window.setTimeout(() => {
+
+        tmpCount = position / (width + gap);
+
+        width = listElems[0].offsetWidth;
+        count = Math.floor(gallery.offsetWidth / width);
+        maxPosition = -(width + gap) * (listElems.length - count);
+
+        position = (width + gap) * tmpCount;
+        list.style.marginLeft = position + 'px';
+        allowArrows();
+
+    }, 250);
+});
